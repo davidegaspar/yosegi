@@ -1,0 +1,30 @@
+{
+  "name": "yosegi",
+  "version": "0.1.0",
+  "authors": [
+    "davidegaspar <me@davidegaspar.com>"
+  ],
+  "description": "ui less mixins",
+  "main": [
+    "src/y.less"
+  ],
+  "ignore": [
+    "arc/**",
+    ".DS_Store",
+    ".DS_Store?",
+    "._*",
+    ".Spotlight-V100",
+    ".Trashes",
+    "ehthumbs.db",
+    "Thumbs.db"
+  ],
+  "keywords": [
+    "ui",
+    "less",
+    "mixin",
+    "responsive",
+    "grid"
+  ],
+  "license": "MIT",
+  "homepage": "yosegi.davidegaspar.com"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "yosegi",
+  "version": "0.1.0",
+  "description": "ui less mixins",
+  "main": "y.less",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/Users/davidegaspar/git/yosegi.git/"
+  },
+  "keywords": [
+    "ui",
+    "less",
+    "mixin",
+    "responsive",
+    "grid"
+  ],
+  "author": "davidegaspar <me@davidegaspar.com>",
+  "license": "MIT"
+}

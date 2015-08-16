@@ -1,0 +1,32 @@
+/*
+  ycol
+  supports diferent sized elements
+  same number of elements per row
+*/
+.ycol(@cols:1,@gaps:@cols - 1,@gap:0,@pad:0){
+    white-space: nowrap;
+    font-size: 0;
+    padding: @pad @gaps*@gap+@pad @pad @pad;
+    &>*{
+      .yrel;
+      width: 100%/@cols;
+      white-space: normal;
+      margin-right: @gap;
+      margin-bottom: @gap;
+      //font-size: 1rem;
+    }
+    &>br{display:none;}
+}
+.ycoln(@n){
+  &>*:not(br):nth-of-type(@{n}n){margin-right: 0;}
+  &>*:not(br):nth-last-of-type(-n+@{n}){margin-bottom: 0;}
+  &>br:nth-of-type(@{n}n){display:block;}
+}
+.ycolb(@n,@lastrow){
+  &>*:not(br):nth-of-type(@{n}){margin-right: 0;}
+  &>*:not(br):nth-last-of-type(-n+@{lastrow}){margin-bottom: 0;}
+  &>br:nth-of-type(@{n}){display:block;}
+}
+.ycolx(@x:1,@cols:1){
+  width: @x/@cols*100%;
+}
