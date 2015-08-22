@@ -71,12 +71,50 @@ module.exports = function(grunt) {
         regExp: false
       }
     },
+    /*
+      man
+    */
+    clean: {
+      man:['man/'],
+    },
+    copy:{
+      doc:{
+        expand: true,
+        cwd: 'doc/md/',
+        src:['*.css'],
+        dest:'man/',
+      }
+    },
+    markdown: {
+      doc: {
+        files: [
+          {'man/readme.html':'readme.md'},
+          {expand: true,cwd: 'doc/',src: '*.md',dest: 'man/',ext: '.html'},
+        ],
+        options: {
+          template: 'doc/md/template.jst',
+          markdownOptions: {
+            gfm: true,
+            highlight: 'auto',
+            tables: true,
+            breaks: true,
+            pedantic: false,
+            sanitize: true,
+            smartLists: true,
+            smartypants: false
+          }
+        }
+      }
+    },
   });
 
   //tasks
   grunt.loadNpmTasks('grunt-prompt');
   grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-markdown');
 
   /*
     git
@@ -94,8 +132,9 @@ module.exports = function(grunt) {
   grunt.registerTask('push',['exec:pushall','exec:pushtags']);
 
   /*
-    default
+    run
   */
+  grunt.registerTask('man',['clean:man','copy:doc','markdown:doc']);
   grunt.registerTask('default',['exec:status']);
 
 };

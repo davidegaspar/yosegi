@@ -2,52 +2,52 @@ yosegi
 ===
 library of less mixins to speed up the UI building process
 
-##use
-####reference inside your less file
+## use
+reference inside your less file
 ```less
 @import (reference) "bower_components/yosegi/src/y.less";
 ```
-##elements
+## elements
 
-####yrel
+#### yrel
 relative position...
 
-####ya
+#### ya
 style a...
 
-####yabs
+#### yabs
 absolute...
 
-####ybg
+#### ybg
 background...
 
-####ybox
+#### ybox
 box...
 textbox...
 iconbox...
 
-####ycenter
+#### ycenter
 center vertically...
 
-####yclean
+#### yclean
 clean browser styles...
 
-####ycol
+#### ycol
 grid system...
 
-####yexp
+#### yexp
 expand
 extand horizontal...
 expand vertically...
 
-####ylabel
+#### ylabel
 text label...
 
-####yradius
+#### yradius
 border radius cross browser...
 
-####yratio
+#### yratio
 create a box w/ a certain ratio...
 
-####ystatic
+#### ystatic
 static element for...
