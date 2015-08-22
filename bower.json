@@ -2,14 +2,13 @@
   "name": "yosegi",
   "version": "0.1.0",
   "authors": [
-    "davidegaspar <me@davidegaspar.com>"
+    "davidegaspar <me@davidegaspar.com> (http://davidegaspar.com)"
   ],
   "description": "ui less mixins",
   "main": [
     "src/y.less"
   ],
   "ignore": [
-    "arc/**",
     ".DS_Store",
     ".DS_Store?",
     "._*",
@@ -26,5 +25,9 @@
     "grid"
   ],
   "license": "MIT",
-  "homepage": "yosegi.davidegaspar.com"
+  "homepage": "yosegi.davidegaspar.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidegaspar/yosegi.git"
+  }
 }
