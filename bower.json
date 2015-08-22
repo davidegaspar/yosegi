@@ -4,7 +4,7 @@
   "authors": [
     "davidegaspar <me@davidegaspar.com> (http://davidegaspar.com)"
   ],
-  "description": "ui less mixins",
+  "description": "library of less mixins to speed up the UI building process",
   "main": [
     "src/y.less"
   ],
