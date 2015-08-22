@@ -1,0 +1,22 @@
+/*
+  ylabel
+*/
+.ylabel(@max-lines:1,@line-height:1.25em,@overflow:ellipsis){
+  >*{
+    .yrel;
+    width: 100%;
+    color: inherit;
+    font: inherit;
+    text-align:inherit;
+    max-height: @line-height*@max-lines;
+    line-height: @line-height;
+    overflow: hidden;
+    text-overflow: @overflow;
+    white-space: nowrap;
+  }
+}
+.ylabel(@max-lines) when (@max-lines > 1){
+  >*{
+    white-space: normal;
+  }
+}

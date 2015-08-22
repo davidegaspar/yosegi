@@ -1,0 +1,31 @@
+/*
+  ybox
+*/
+.ybox(@height:100%){
+  >*{
+    .yabs;
+    top:50%;
+    height: @height;
+    margin-top: -@height/2;
+  }
+}
+
+.ytextbox(@lines:1,@line-height:1.25em){
+  .ybox(@line-height*@lines);
+  >*{
+    color: inherit;
+    font-size: inherit;
+    text-align:inherit;
+    //nowrap
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    //box
+    width: 100%;
+    line-height: @line-height;
+  }
+}
+
+.yiconbox(@line-height:1.25em){
+  .ytextbox(@lines:1,@line-height:@line-height);
+}
