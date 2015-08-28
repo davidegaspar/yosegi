@@ -1,10 +1,10 @@
 {
   "name": "yosegi",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     "davidegaspar <me@davidegaspar.com> (http://davidegaspar.com)"
   ],
-  "description": "ui less mixins",
+  "description": "library of less mixins to speed up the UI building process",
   "main": [
     "src/y.less"
   ],

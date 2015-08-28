@@ -58,6 +58,8 @@ module.exports = function(grunt) {
       bfix:{cmd: 'git checkout -b fix-<%= pkg.version %> master'},
       mfix:{cmd: 'git merge --no-ff fix-<%= pkg.version %>'},
       dfix:{cmd: 'git branch -d fix-<%= pkg.version %>'},
+      githubmaster:{cmd: 'git push github master'},
+      githubtags:{cmd: 'git push github --tags'},
     },
     bump: {
       options: {
@@ -135,6 +137,7 @@ module.exports = function(grunt) {
     run
   */
   grunt.registerTask('man',['clean:man','copy:doc','markdown:doc']);
+  grunt.registerTask('github',['exec:githubmaster','githubtags']);
   grunt.registerTask('default',['exec:status']);
 
 };
