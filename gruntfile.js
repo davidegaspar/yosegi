@@ -127,9 +127,9 @@ module.exports = function(grunt) {
   grunt.registerTask('feat:open',['prompt:branch','exec:bfeat']);
   grunt.registerTask('feat:close',['prompt:branch','exec:checkoutdev','exec:mfeat','exec:dfeat','exec:pushdev']);
   grunt.registerTask('feat:res',['prompt:branch','exec:dfeat','exec:pushdev']);
-  grunt.registerTask('rel:open',['prompt:bump','exec:brel','bumpit','exec:commit']);
+  grunt.registerTask('rel:open',['prompt:bump','bumpit','exec:brel','exec:commit']);
   grunt.registerTask('rel:close',['exec:checkoutmaster','exec:mrel','exec:tag','exec:checkoutdev','exec:mrel','exec:drel']);
-  grunt.registerTask('fix:open',['prompt:bump','exec:bfix','bumpit','exec:commit']);
+  grunt.registerTask('fix:open',['prompt:bump','bumpit','exec:bfix','exec:commit']);
   grunt.registerTask('fix:close',['exec:checkoutmaster','exec:mfix','exec:tag','exec:checkoutdev','exec:mfix','exec:dfix']);
   grunt.registerTask('push',['exec:pushall','exec:pushtags']);
 
