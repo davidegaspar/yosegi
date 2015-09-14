@@ -1,0 +1,14 @@
+/*
+  yform
+*/
+.yform(@placheholder:black){
+  /* clean */
+  textarea{resize:none;}
+  input[type="text"],select,textarea{.yclean;}
+  select::-ms-expand {display: none;}
+  /* placeholders */
+  input[type="text"]::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color: @placheholder;}
+  input[type="text"]:-moz-placeholder,textarea:-moz-placeholder{color: @placheholder;}
+  input[type="text"]::-moz-placeholder,textarea::-moz-placeholder{color: @placheholder;}
+  input[type="text"]:-ms-input-placeholder,textarea:-ms-input-placeholder {color: @placheholder;}
+}
