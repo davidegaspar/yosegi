@@ -1,6 +1,6 @@
 {
   "name": "yosegi",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "library of less mixins to speed up the UI building process",
   "main": "y.less",
   "scripts": {
